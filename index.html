@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blinko - AI Agent Status Light</title>
+  <meta name="description" content="Blinko is a macOS floating signal light that shows AI agent work status across CatDesk, Claude Code, Codex, Cursor, OpenClaw, Z Code, and OpenCode.">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101214;
+      --panel: #171b1e;
+      --line: #30363d;
+      --text: #f5f7f8;
+      --muted: #a9b4bc;
+      --green: #33d17a;
+      --yellow: #f6d64a;
+      --red: #ff5f57;
+      --accent: #66d9ef;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        linear-gradient(180deg, rgba(102, 217, 239, 0.10), transparent 360px),
+        var(--bg);
+    }
+
+    main {
+      width: min(1040px, calc(100% - 40px));
+      margin: 0 auto;
+      padding: 44px 0 52px;
+    }
+
+    .hero {
+      min-height: 72vh;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 360px;
+      gap: 48px;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 680px;
+      font-size: 68px;
+      line-height: 0.96;
+      font-weight: 750;
+      letter-spacing: 0;
+    }
+
+    .lede {
+      max-width: 650px;
+      margin: 28px 0 0;
+      color: var(--muted);
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 650;
+      background: #20262a;
+    }
+
+    .button.primary {
+      color: #07100b;
+      border-color: transparent;
+      background: var(--green);
+    }
+
+    .signal-preview {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 420px;
+    }
+
+    .traffic-light {
+      width: 150px;
+      padding: 18px;
+      border: 1px solid #3a4248;
+      border-radius: 28px;
+      background: linear-gradient(180deg, #242a2f, #101315);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+    }
+
+    .lamp {
+      width: 112px;
+      height: 112px;
+      margin: 12px auto;
+      border-radius: 999px;
+      background: #111;
+      box-shadow: inset 0 0 18px rgba(0, 0, 0, 0.8);
+    }
+
+    .lamp.red {
+      background: radial-gradient(circle at 35% 30%, #fff1ef, var(--red) 34%, #5a1414 78%);
+    }
+
+    .lamp.yellow {
+      background: radial-gradient(circle at 35% 30%, #fff8d7, var(--yellow) 36%, #5a470d 78%);
+    }
+
+    .lamp.green {
+      background: radial-gradient(circle at 35% 30%, #e9fff2, var(--green) 35%, #104a2b 78%);
+      box-shadow: 0 0 34px rgba(51, 209, 122, 0.42), inset 0 0 18px rgba(0, 0, 0, 0.36);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+      padding-top: 34px;
+    }
+
+    .feature {
+      min-height: 150px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+    }
+
+    .feature h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    footer {
+      padding-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 760px) {
+      main {
+        width: min(100% - 28px, 560px);
+        padding-top: 28px;
+      }
+
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding-bottom: 28px;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      .lede {
+        font-size: 18px;
+      }
+
+      .signal-preview {
+        min-height: 280px;
+      }
+
+      .traffic-light {
+        width: 116px;
+        border-radius: 22px;
+      }
+
+      .lamp {
+        width: 82px;
+        height: 82px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero" aria-label="Blinko download">
+      <div>
+        <div class="brand">
+          <img src="assets/icon.png" alt="Blinko app icon">
+          <span>macOS desktop app</span>
+        </div>
+        <h1>Blinko</h1>
+        <p class="lede">A floating signal light for AI agent work. See when your local agents are working, waiting for input, blocked by permission, or finished.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/zhc93design/blinko/releases/latest">Download for macOS</a>
+          <a class="button" href="https://github.com/zhc93design/blinko/releases">View releases</a>
+        </div>
+      </div>
+      <div class="signal-preview" aria-hidden="true">
+        <div class="traffic-light">
+          <div class="lamp red"></div>
+          <div class="lamp yellow"></div>
+          <div class="lamp green"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Core features">
+      <article class="feature">
+        <h2>Agent-aware</h2>
+        <p>Monitors CatDesk, Claude Code, Codex, Cursor, OpenClaw, Z Code, and OpenCode from local status sources.</p>
+      </article>
+      <article class="feature">
+        <h2>Always visible</h2>
+        <p>Keeps a compact floating light on screen, with idle, working, attention, error, and silent states.</p>
+      </article>
+      <article class="feature">
+        <h2>Signed updates</h2>
+        <p>Ships as a signed and notarized macOS DMG, with in-app update checks from public GitHub Releases.</p>
+      </article>
+    </section>
+
+    <footer>
+      Blinko is distributed through <a href="https://github.com/zhc93design/blinko">zhc93design/blinko</a>.
+    </footer>
+  </main>
+</body>
+</html>
