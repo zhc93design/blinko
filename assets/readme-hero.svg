@@ -1,5 +1,5 @@
 <svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Blinko desktop signal light overview</title>
+  <title id="title">Winko desktop signal light overview</title>
   <desc id="desc">A macOS desktop with a floating signal light that summarizes AI agent status across multiple tools.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
@@ -46,7 +46,7 @@
   </g>
 
   <g>
-    <text x="207" y="240" fill="#101827" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="62" font-weight="800">Blinko</text>
+    <text x="207" y="240" fill="#101827" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="62" font-weight="800">Winko</text>
     <text x="207" y="286" fill="#485465" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="25" font-weight="600">Your AI agents, translated into light.</text>
     <text x="207" y="330" fill="#647184" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="500">Codex, Claude Code, Cursor, OpenCode and more report back as one calm desktop signal.</text>
   </g>
