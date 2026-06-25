@@ -1,6 +1,6 @@
 <svg width="1280" height="720" viewBox="0 0 1280 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
-  <title id="title">Winko AI 编程助手信号灯概览</title>
-  <desc id="desc">一个 macOS 桌面场景，多路 AI 编程助手状态汇聚到一盏悬浮信号灯。</desc>
+  <title id="title">Winko AI agent signal light overview</title>
+  <desc id="desc">A polished macOS desktop scene where several AI agent sources flow into one floating signal light.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1280" y2="720" gradientUnits="userSpaceOnUse">
       <stop stop-color="#111827"/>
@@ -58,23 +58,23 @@
 
   <g>
     <text x="218" y="235" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="72" font-weight="850">Winko</text>
-    <text x="220" y="282" fill="#334155" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700">AI 编程助手信号灯</text>
-    <text x="220" y="326" fill="#64748B" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="500">本地状态，一盏灯读懂。</text>
+    <text x="220" y="282" fill="#334155" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="24" font-weight="700">AI Agent Signal Light</text>
+    <text x="220" y="326" fill="#64748B" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="500">Local agent status, one signal.</text>
   </g>
 
   <g>
     <rect x="220" y="382" width="430" height="54" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
     <circle cx="250" cy="409" r="10" fill="#22C55E"/>
-    <text x="278" y="416" fill="#111827" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="750">空闲</text>
-    <text x="358" y="416" fill="#64748B" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="550">可以放心</text>
+    <text x="278" y="416" fill="#111827" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="750">idle</text>
+    <text x="358" y="416" fill="#64748B" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="550">all clear</text>
     <rect x="220" y="452" width="430" height="54" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
     <circle cx="250" cy="479" r="10" fill="#FACC15"/>
-    <text x="278" y="486" fill="#111827" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="750">注意</text>
-    <text x="358" y="486" fill="#64748B" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="550">值得看一眼</text>
+    <text x="278" y="486" fill="#111827" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="750">attention</text>
+    <text x="388" y="486" fill="#64748B" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="550">needs a look</text>
     <rect x="220" y="522" width="430" height="54" rx="16" fill="#FFFFFF" stroke="#CBD5E1"/>
     <circle cx="250" cy="549" r="10" fill="#EF4444"/>
-    <text x="278" y="556" fill="#111827" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="750">异常</text>
-    <text x="358" y="556" fill="#64748B" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="550">权限或失败</text>
+    <text x="278" y="556" fill="#111827" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="18" font-weight="750">error</text>
+    <text x="358" y="556" fill="#64748B" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="550">permission or failure</text>
     <rect x="220" y="604" width="430" height="8" rx="4" fill="url(#rail)"/>
   </g>
 
@@ -89,7 +89,7 @@
     <rect x="543" y="421" width="129" height="48" rx="24" fill="#F8FAFC" stroke="#CBD5E1"/>
     <text x="579" y="451" fill="#1F2937" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="750">Cursor</text>
     <rect x="481" y="493" width="191" height="48" rx="24" fill="#F8FAFC" stroke="#CBD5E1"/>
-    <text x="529" y="523" fill="#1F2937" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="750">OpenCode 等</text>
+    <text x="514" y="523" fill="#1F2937" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="750">OpenCode + more</text>
   </g>
 
   <g>
@@ -118,8 +118,8 @@
   <g>
     <rect x="814" y="114" width="206" height="52" rx="26" fill="#F8FAFC" stroke="#CBD5E1"/>
     <circle cx="842" cy="140" r="9" fill="#22C55E"/>
-    <text x="862" y="146" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="800">一盏信号灯</text>
+    <text x="862" y="146" fill="#0F172A" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="800">one signal</text>
     <rect x="842" y="586" width="166" height="42" rx="21" fill="#111827" stroke="#334155"/>
-    <text x="878" y="613" fill="#E5E7EB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="750">屏幕 + 硬件</text>
+    <text x="876" y="613" fill="#E5E7EB" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="750">desktop + hardware</text>
   </g>
 </svg>
